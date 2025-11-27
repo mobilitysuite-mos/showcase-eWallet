@@ -1,4 +1,4 @@
-# 📱 Mobility Suite mos. Showcase – Gas Station App
+# 📱 Mobility Suite mos. Showcase – e-Wallet App
 
 <table>
 <tr>
