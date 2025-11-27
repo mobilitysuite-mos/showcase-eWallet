@@ -1,0 +1,165 @@
+{
+  "name": "startView",
+  "content": {
+    "content": {
+      "infoContainer": {
+        "states": {
+          "visible": {
+            "hidden": false
+          },
+          "hidden": {
+            "hidden": true
+          }
+        },
+        "state": "visible",
+        "conditions": [
+          {
+            "state": "hidden",
+            "conditions": {
+              "left": {
+                "left": {
+                  "context": "variable",
+                  "field": "showCardSettings"
+                },
+                "mode": "equal",
+                "right": "true"
+              },
+              "mode": "or",
+              "right": {
+                "left": {
+                  "context": "layerStatus",
+                  "field": "cardsGallery:childCount"
+                },
+                "mode": "greaterOrEquals",
+                "right": "1"
+              }
+            }
+          }
+        ]
+      },
+      "scanButton": {
+        "actions": [
+          {
+            "type": "showBarcodeScanner",
+            "params": {
+              "formats": [
+                "ean-13"
+              ],
+              "onSuccess": "scanSuccess",
+              "onError": "scanError"
+            }
+          }
+        ],
+        "states": {
+          "visible": {
+            "hidden": false
+          },
+          "hidden": {
+            "hidden": true
+          }
+        },
+        "state": "visible",
+        "conditions": [
+          {
+            "state": "hidden",
+            "conditions": {
+              "left": {
+                "context": "variable",
+                "field": "showCardSettings"
+              },
+              "mode": "equal",
+              "right": "true"
+            }
+          }
+        ]
+      },
+      "cardSettings": {
+        "states": {
+          "visible": {
+            "hidden": false
+          },
+          "hidden": {
+            "hidden": true
+          }
+        },
+        "state": "hidden",
+        "conditions": [
+          {
+            "state": "visible",
+            "conditions": {
+              "left": {
+                "context": "variable",
+                "field": "showCardSettings"
+              },
+              "mode": "equal",
+              "right": "true"
+            }
+          }
+        ]
+      },
+      "cardsGallery": {
+        "states": {
+          "visible": {
+            "hidden": false
+          },
+          "hidden": {
+            "hidden": true
+          }
+        },
+        "state": "hidden",
+        "conditions": [
+          {
+            "state": "visible",
+            "conditions": {
+              "left": {
+                "context": "layerStatus",
+                "field": "cardsGallery:childCount"
+              },
+              "mode": "greaterOrEquals",
+              "right": "1"
+            }
+          }
+        ]
+      }
+    },
+    "events": [
+      {
+        "type": "checkSuccess",
+        "actions": [
+          {
+            "type": "switchState",
+            "params": {
+              "layer": "cardItemLocked",
+              "states": [
+                "hidden"
+              ]
+            }
+          },
+          {
+            "type": "layerAction",
+            "params": {
+              "layerName": "unlockAnimation",
+              "async": false,
+              "actions": [
+                {
+                  "type": "play"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "type": "checkError",
+        "actions": [
+          {
+            "type": "showMessage",
+            "params": {
+              "text": "$lang(biometricsError)$"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "table": {
+    "name": "cards",
+    "fields": [
+      {
+        "name": "id",
+        "type": "TEXT"
+      },
+      {
+        "name": "name",
+        "type": "TEXT"
+      },
+      {
+        "name": "article",
+        "type": "TEXT"
+      },
+      {
+        "name": "colorOption",
+        "type": "TEXT"
+      },
+      {
+        "name": "biometrics",
+        "type": "TEXT"
+      },
+      {
+        "name": "timestamp",
+        "type": "TEXT"
+      }
+    ],
+    "primaryKey": [
+      "id"
+    ],
+    "queries": {
+      "allCards": {
+        "custom": "SELECT cards.id, name, article, colorOption, cardColors.gradientStart, cardColors.gradientEnd, biometrics, strftime('%d.%m.%Y', timestamp) AS date, strftime('%H:%M', timestamp) AS time FROM cards JOIN cardColors ON cards.colorOption = cardColors.id"
+      },
+      "cardById": {
+        "custom": "SELECT cards.id, name, article, colorOption, cardColors.gradientStart, cardColors.gradientEnd, biometrics, strftime('%d.%m.%Y', timestamp) AS date, strftime('%H:%M', timestamp) AS time FROM cards JOIN cardColors ON cards.colorOption = cardColors.id WHERE cards.id = ?1"
+      }
+    }
+  }
+}

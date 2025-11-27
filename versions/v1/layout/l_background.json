@@ -1,0 +1,43 @@
+{
+  "name": "l_background",
+  "layers": [
+    {
+      "type": "gradient",
+      "name": "backgroundGradient",
+      "gradientType": "linear",
+      "direction": "TD",
+      "colors": [
+        "#0E1B1B",
+        "#070E0E",
+        "#142828",
+        "#070E0E",
+        "#0E1B1B"
+      ],
+      "classes": [
+        "fullSize"
+      ]
+    },
+    {
+      "type": "image",
+      "name": "backgroundVector",
+      "value": "asset://background-vector.png",
+      "scaleType": "scaleToFill",
+      "constraints": [
+        {
+          "type": "pos",
+          "x": "0pt",
+          "y": "30pt",
+          "anchor": "nw",
+          "relativeAnchor": "w"
+        },
+        {
+          "type": "pos",
+          "x": "0pt",
+          "y": "0pt",
+          "anchor": "se",
+          "relativeAnchor": "se"
+        }
+      ]
+    }
+  ]
+}

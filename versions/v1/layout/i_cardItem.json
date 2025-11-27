@@ -1,0 +1,371 @@
+{
+  "name": "i_cardItem",
+  "layers": [
+    {
+      "type": "container",
+      "name": "cardItem",
+      "constraints": [
+        {
+          "type": "pos",
+          "x": "15pt",
+          "y": "0pt",
+          "anchor": "nw",
+          "relativeAnchor": "nw"
+        },
+        {
+          "type": "pos",
+          "x": "-15pt",
+          "y": "0pt",
+          "anchor": "se",
+          "relativeAnchor": "se"
+        }
+      ],
+      "children": [
+        {
+          "type": "gradient",
+          "name": "cardGradient",
+          "dataKey": "cardGradient",
+          "gradientType": "linear",
+          "direction": "TD",
+          "borderRadius": "25pt",
+          "opacity": 0.8,
+          "classes": [
+            "fullSize"
+          ]
+        },
+        {
+          "type": "text",
+          "name": "cardName",
+          "dataKey": "cardName",
+          "maxLines": 2,
+          "classes": [
+            "fontBold",
+            "fontSizeXL",
+            "fontColorPrimary"
+          ],
+          "constraints": [
+            {
+              "type": "pos",
+              "x": "25pt",
+              "y": "30pt",
+              "anchor": "nw",
+              "relativeAnchor": "nw"
+            },
+            {
+              "type": "pos",
+              "x": "-20pt",
+              "anchor": "e",
+              "relativeAnchor": "e"
+            }
+          ]
+        },
+        {
+          "type": "barcodeRenderer",
+          "name": "cardBarcode",
+          "dataKey": "cardBarcode",
+          "barcodeType": "ean-13",
+          "backgroundColor": "#00000000",
+          "foregroundColor": "#FFFFFF",
+          "constraints": [
+            {
+              "type": "pos",
+              "x": "0pt",
+              "y": "20pt",
+              "anchor": "nw",
+              "relativeAnchor": "sw",
+              "relativeTo": "cardName"
+            },
+            {
+              "type": "pos",
+              "x": "-25pt",
+              "anchor": "e",
+              "relativeAnchor": "e"
+            },
+            {
+              "type": "size",
+              "height": "130pt"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "name": "cardArticle",
+          "dataKey": "cardArticle",
+          "classes": [
+            "fontBold",
+            "fontSizeL",
+            "fontColorPrimary"
+          ],
+          "constraints": [
+            {
+              "type": "pos",
+              "x": "0pt",
+              "y": "20pt",
+              "anchor": "nw",
+              "relativeAnchor": "sw",
+              "relativeTo": "cardBarcode"
+            },
+            {
+              "type": "pos",
+              "x": "-25pt",
+              "anchor": "e",
+              "relativeAnchor": "e"
+            },
+            {
+              "type": "size",
+              "height": "25pt"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "name": "scanDate",
+          "dataKey": "scanDate",
+          "classes": [
+            "fontLight",
+            "fontSizeM"
+          ],
+          "constraints": [
+            {
+              "type": "pos",
+              "x": "0pt",
+              "y": "0pt",
+              "anchor": "nw",
+              "relativeAnchor": "sw",
+              "relativeTo": "cardArticle"
+            },
+            {
+              "type": "pos",
+              "x": "0pt",
+              "anchor": "e",
+              "relativeAnchor": "e"
+            },
+            {
+              "type": "size",
+              "height": "20pt"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "name": "scanTime",
+          "dataKey": "scanTime",
+          "classes": [
+            "fontThin",
+            "fontSizeM"
+          ],
+          "constraints": [
+            {
+              "type": "pos",
+              "x": "0pt",
+              "y": "2pt",
+              "anchor": "nw",
+              "relativeAnchor": "sw",
+              "relativeTo": "scanDate"
+            },
+            {
+              "type": "pos",
+              "x": "0pt",
+              "anchor": "e",
+              "relativeAnchor": "e"
+            },
+            {
+              "type": "size",
+              "height": "20pt"
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "name": "editButton",
+          "dataKey": "editButton",
+          "constraints": [
+            {
+              "type": "pos",
+              "x": "-10pt",
+              "y": "-10pt",
+              "anchor": "se",
+              "relativeAnchor": "se"
+            },
+            {
+              "type": "size",
+              "height": "40pt",
+              "width": "40pt"
+            }
+          ],
+          "children": [
+            {
+              "type": "image",
+              "name": "editIcon",
+              "value": "asset://icon-edit.png",
+              "scaleType": "scaleAspectFit",
+              "tint": "#FFFFFF",
+              "classes": [
+                "fullSize"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "name": "cardItemLocked",
+          "dataKey": "cardItemLocked",
+          "borderRadius": "25pt",
+          "classes": [
+            "fullSize"
+          ],
+          "children": [
+            {
+              "type": "gradient",
+              "name": "cardGradient",
+              "dataKey": "cardGradient",
+              "gradientType": "linear",
+              "direction": "TD",
+              "borderRadius": "25pt",
+              "classes": [
+                "fullSize"
+              ]
+            },
+            {
+              "type": "color",
+              "name": "backgroundColor",
+              "classes": [
+                "backgroundTintLight",
+                "fullSize"
+              ]
+            },
+            {
+              "type": "container",
+              "name": "lockedCardContent",
+              "constraints": [
+                {
+                  "type": "pos",
+                  "x": "25pt",
+                  "y": "0pt",
+                  "anchor": "w",
+                  "relativeAnchor": "w"
+                },
+                {
+                  "type": "pos",
+                  "x": "-25pt",
+                  "anchor": "e",
+                  "relativeAnchor": "e"
+                }
+              ],
+              "children": [
+                {
+                  "type": "image",
+                  "name": "biometricsIcon",
+                  "value": "asset://icon-biometrics.png",
+                  "scaleType": "scaleAspectFit",
+                  "constraints": [
+                    {
+                      "type": "pos",
+                      "x": "0pt",
+                      "y": "0pt",
+                      "anchor": "n",
+                      "relativeAnchor": "n"
+                    },
+                    {
+                      "type": "size",
+                      "height": "100pt",
+                      "width": "100pt"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "name": "biometricsText",
+                  "value": "$lang(lockedCard)$",
+                  "scaleType": "alignCenter",
+                  "classes": [
+                    "fontBold",
+                    "fontSizeM"
+                  ],
+                  "constraints": [
+                    {
+                      "type": "pos",
+                      "x": "0pt",
+                      "y": "20pt",
+                      "anchor": "n",
+                      "relativeAnchor": "s",
+                      "relativeTo": "biometricsIcon"
+                    },
+                    {
+                      "type": "size",
+                      "width": "100%"
+                    }
+                  ]
+                },
+                {
+                  "type": "container",
+                  "name": "unlockButton",
+                  "dataKey": "unlockButton",
+                  "classes": [
+                    "actionButton"
+                  ],
+                  "constraints": [
+                    {
+                      "type": "pos",
+                      "x": "0pt",
+                      "y": "30pt",
+                      "anchor": "n",
+                      "relativeAnchor": "s",
+                      "relativeTo": "biometricsText"
+                    },
+                    {
+                      "type": "size",
+                      "height": "40pt",
+                      "width": "150pt"
+                    }
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "$lang(unlockCard)$",
+                      "scaleType": "alignCenter",
+                      "classes": [
+                        "fontBold",
+                        "fullSize"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "name": "cardItemUnlocked",
+          "dataKey": "cardItemUnlocked",
+          "borderRadius": "25pt",
+          "classes": [
+            "fullSize"
+          ],
+          "children": [
+            {
+              "type": "color",
+              "name": "backgroundColor",
+              "classes": [
+                "backgroundTintLight",
+                "fullSize"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "lottieImage",
+          "name": "unlockAnimation",
+          "dataKey": "unlockAnimation",
+          "value": "asset://approved.json",
+          "autoplay": false,
+          "repeating": false,
+          "classes": [
+            "fullSize"
+          ]
+        }
+      ]
+    }
+  ]
+}

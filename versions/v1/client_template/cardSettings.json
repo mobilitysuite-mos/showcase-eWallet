@@ -1,0 +1,119 @@
+{
+  "name": "cardSettings",
+  "content": {
+    "closeButton": {
+      "actions": [
+        {
+          "type": "clearVariable",
+          "params": {
+            "variable": "showCardSettings"
+          }
+        },
+        {
+          "type": "clearVariable",
+          "params": {
+            "variable": "cardId"
+          }
+        },
+        {
+          "type": "resetForm",
+          "params": {
+            "form": "cardSettings"
+          }
+        }
+      ]
+    },
+    "createButtonsContainer": {
+      "states": {
+        "visible": {
+          "hidden": false
+        },
+        "hidden": {
+          "hidden": true
+        }
+      },
+      "state": "visible",
+      "conditions": [
+        {
+          "state": "hidden",
+          "conditions": {
+            "left": {
+              "context": "variable",
+              "field": "cardId"
+            },
+            "mode": "exists"
+          }
+        }
+      ]
+    },
+    "cancelButton": {
+      "actions": [
+        {
+          "type": "clearVariable",
+          "params": {
+            "variable": "showCardSettings"
+          }
+        },
+        {
+          "type": "resetForm",
+          "params": {
+            "form": "cardSettings"
+          }
+        }
+      ]
+    },
+    "saveButton": {
+      "actions": [
+        {
+          "type": "fireEvent",
+          "params": {
+            "eventType": "addCard"
+          }
+        }
+      ]
+    },
+    "editButtonsContainer": {
+      "states": {
+        "visible": {
+          "hidden": false
+        },
+        "hidden": {
+          "hidden": true
+        }
+      },
+      "state": "hidden",
+      "conditions": [
+        {
+          "state": "visible",
+          "conditions": {
+            "left": {
+              "context": "variable",
+              "field": "cardId"
+            },
+            "mode": "exists"
+          }
+        }
+      ]
+    },
+    "deleteButton": {
+      "actions": [
+        {
+          "type": "fireEvent",
+          "params": {
+            "eventType": "deleteCard"
+          }
+        }
+      ]
+    },
+    "updateButton": {
+      "actions": [
+        {
+          "type": "fireEvent",
+          "params": {
+            "eventType": "updateCard"
+          }
+        }
+      ]
+    }
+  }
+}

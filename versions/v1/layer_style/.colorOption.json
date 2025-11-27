@@ -1,0 +1,25 @@
+{
+  "name": ".colorOption",
+  "content": {
+    "gradientType": "linear",
+    "direction": "TD",
+    "borderRadius": "10pt",
+    "opacity": 0.8,
+    "constraints": [
+      {
+        "type": "pos",
+        "x": "2pt",
+        "y": "2pt",
+        "anchor": "nw",
+        "relativeAnchor": "nw"
+      },
+      {
+        "type": "pos",
+        "x": "-2pt",
+        "y": "-2pt",
+        "anchor": "se",
+        "relativeAnchor": "se"
+      }
+    ]
+  }
+}

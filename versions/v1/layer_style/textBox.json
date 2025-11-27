@@ -1,0 +1,10 @@
+{
+  "name": "textBox",
+  "content": {
+    "fontSize": "16pt",
+    "fontColor": "#A0CFCF",
+    "hintFontColor": "#A0CFCF99",
+    "lineBreakMode": "truncateEnd",
+    "font": "LibreFranklin-Regular"
+  }
+}

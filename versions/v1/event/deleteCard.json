@@ -1,0 +1,46 @@
+{
+  "name": "deleteCard",
+  "content": {
+    "type": "deleteCard",
+    "actions": [
+      {
+        "type": "askUser",
+        "params": {
+          "message": "$lang(deleteConfirm)$",
+          "buttons": [
+            "$lang(delete)$",
+            "$lang(cancel)$"
+          ],
+          "actions": [
+            [
+              {
+                "type": "executeSQL",
+                "leadingDelimiter": "{$",
+                "trailingDelimiter": "$}",
+                "dynamicParams": {
+                  "id": {
+                    "context": "variable",
+                    "field": "cardId"
+                  }
+                },
+                "params": {
+                  "sql": "DELETE FROM cards WHERE id = ?1",
+                  "sqlParams": [
+                    "{$id$}"
+                  ],
+                  "onSuccess": "cardSuccess",
+                  "onError": "cardError"
+                }
+              }
+            ],
+            [
+              {
+                "type": "noAction"
+              }
+            ]
+          ]
+        }
+      }
+    ]
+  }
+}

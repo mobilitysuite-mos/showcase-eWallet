@@ -1,0 +1,49 @@
+{
+  "table": {
+    "name": "cardColors",
+    "fields": [
+      {
+        "name": "id",
+        "type": "TEXT"
+      },
+      {
+        "name": "gradientStart",
+        "type": "TEXT"
+      },
+      {
+        "name": "gradientEnd",
+        "type": "TEXT"
+      }
+    ],
+    "primaryKey": [
+      "id"
+    ]
+  },
+  "data": [
+    {
+      "id": "purple",
+      "gradientStart": "#631EF4",
+      "gradientEnd": "#B036D8"
+    },
+    {
+      "id": "blue",
+      "gradientStart": "#E64F4D",
+      "gradientEnd": "#5F86FF"
+    },
+    {
+      "id": "lightGreen",
+      "gradientStart": "#233AE8",
+      "gradientEnd": "#4EE2D3"
+    },
+    {
+      "id": "orange",
+      "gradientStart": "#FF38EA",
+      "gradientEnd": "#FF6934"
+    },
+    {
+      "id": "darkGreen",
+      "gradientStart": "#4EB99E",
+      "gradientEnd": "#3DD773"
+    }
+  ]
+}

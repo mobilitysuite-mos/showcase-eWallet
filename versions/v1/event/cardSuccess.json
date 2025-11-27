@@ -1,0 +1,26 @@
+{
+  "name": "cardSuccess",
+  "content": {
+    "type": "cardSuccess",
+    "actions": [
+      {
+        "type": "clearVariable",
+        "params": {
+          "variable": "showCardSettings"
+        }
+      },
+      {
+        "type": "clearVariable",
+        "params": {
+          "variable": "cardId"
+        }
+      },
+      {
+        "type": "resetForm",
+        "params": {
+          "form": "cardSettings"
+        }
+      }
+    ]
+  }
+}

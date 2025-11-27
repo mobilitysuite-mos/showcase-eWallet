@@ -1,0 +1,21 @@
+{
+  "name": ".fullSize",
+  "content": {
+    "constraints": [
+      {
+        "type": "pos",
+        "x": "0pt",
+        "y": "0pt",
+        "anchor": "nw",
+        "relativeAnchor": "nw"
+      },
+      {
+        "type": "pos",
+        "x": "0pt",
+        "y": "0pt",
+        "anchor": "se",
+        "relativeAnchor": "se"
+      }
+    ]
+  }
+}

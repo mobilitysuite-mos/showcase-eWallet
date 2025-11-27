@@ -1,0 +1,14 @@
+{
+  "name": "scanError",
+  "content": {
+    "type": "scanError",
+    "actions": [
+      {
+        "type": "showMessage",
+        "params": {
+          "text": "$lang(scanError)$"
+        }
+      }
+    ]
+  }
+}

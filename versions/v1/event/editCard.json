@@ -1,0 +1,54 @@
+{
+  "name": "editCard",
+  "content": {
+    "type": "editCard",
+    "actions": [
+      {
+        "type": "setFormValue",
+        "params": {
+          "form": "cardSettings",
+          "key": "name",
+          "value": "{{name}}"
+        }
+      },
+      {
+        "type": "setFormValue",
+        "params": {
+          "form": "cardSettings",
+          "key": "article",
+          "value": "{{article}}"
+        }
+      },
+      {
+        "type": "setFormValue",
+        "params": {
+          "form": "cardSettings",
+          "key": "colorOption",
+          "value": "{{colorOption}}"
+        }
+      },
+      {
+        "type": "setFormValue",
+        "params": {
+          "form": "cardSettings",
+          "key": "biometrics",
+          "value": "{{biometrics}}"
+        }
+      },
+      {
+        "type": "setVariable",
+        "params": {
+          "variable": "cardId",
+          "value": "{{id}}"
+        }
+      },
+      {
+        "type": "setVariable",
+        "params": {
+          "variable": "showCardSettings",
+          "value": "true"
+        }
+      }
+    ]
+  }
+}

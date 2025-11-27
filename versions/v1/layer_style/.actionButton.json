@@ -1,0 +1,8 @@
+{
+  "name": ".actionButton",
+  "content": {
+    "borderWidth": "2pt",
+    "borderRadius": "10pt",
+    "borderColor": "#1DFFB4"
+  }
+}

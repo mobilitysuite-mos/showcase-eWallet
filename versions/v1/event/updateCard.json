@@ -1,0 +1,53 @@
+{
+  "name": "updateCard",
+  "content": {
+    "type": "updateCard",
+    "actions": [
+      {
+        "type": "showMessage",
+        "params": {
+          "text": "{{id}}"
+        }
+      },
+      {
+        "type": "executeSQL",
+        "leadingDelimiter": "{$",
+        "trailingDelimiter": "$}",
+        "dynamicParams": {
+          "article": {
+            "context": "namedForm",
+            "field": "cardSettings:article"
+          },
+          "name": {
+            "context": "namedForm",
+            "field": "cardSettings:name"
+          },
+          "colorOption": {
+            "context": "namedForm",
+            "field": "cardSettings:colorOption"
+          },
+          "biometrics": {
+            "context": "namedForm",
+            "field": "cardSettings:biometrics"
+          },
+          "id": {
+            "context": "variable",
+            "field": "cardId"
+          }
+        },
+        "params": {
+          "sql": "UPDATE cards SET name = ?1, article = ?2, colorOption = ?3, biometrics = ?4 WHERE id = ?5",
+          "sqlParams": [
+            "{$name$}",
+            "{$article$}",
+            "{$colorOption$}",
+            "{$biometrics$}",
+            "{$id$}"
+          ],
+          "onSuccess": "cardSuccess",
+          "onError": "cardError"
+        }
+      }
+    ]
+  }
+}

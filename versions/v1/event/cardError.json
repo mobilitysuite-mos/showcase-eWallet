@@ -1,0 +1,14 @@
+{
+  "name": "cardError",
+  "content": {
+    "type": "cardError",
+    "actions": [
+      {
+        "type": "showMessage",
+        "params": {
+          "text": "$lang(cardError)$"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "default",
+  "content": {
+    "content": {
+      "orientation": {
+        "default": "portrait"
+      },
+      "default": {
+        "navbarDisabled": true,
+        "loadingSpinnerColor": "#C21E2C",
+        "statusbarBackgroundColor": "#00000000",
+        "bottombarBackgroundColor": "#00000000"
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": ".contentContainer",
+  "content": {
+    "value": "#142828",
+    "borderWidth": "1pt",
+    "borderRadius": "25pt",
+    "borderColor": "#295151",
+    "opacity": 0.8
+  }
+}

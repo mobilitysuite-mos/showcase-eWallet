@@ -1,0 +1,27 @@
+{
+  "name": "default",
+  "content": {
+    "biometricsError": "Couldn’t verify your identity",
+    "biometricsTitle": "Unlock with your biometrics",
+    "cancel": "Cancel",
+    "cardError": "Something went wrong, please try again later",
+    "chooseColor": "Choose a color to make it easier to find your scan.",
+    "color": "Color",
+    "delete": "Delete",
+    "deleteConfirm": "Are you sure you want to delete?",
+    "enableBiometrics": "Enable the biometric function.",
+    "header": "E-WALLET",
+    "lockedCard": "This card is locked.\nConfirm your identity to unlock.",
+    "name": "Name",
+    "nameHint": "My Card",
+    "save": "Save",
+    "scan": "Scan your barcode or QR code to fill the contents of your e-Wallet App",
+    "scanError": "Scan canceled",
+    "scannedArticle": "Scanned article",
+    "sequreScans": "Wanna secure your scans?",
+    "subHeader": "A place for everything and\neverything in its place.",
+    "unlockCard": "Unlock me",
+    "update": "Update",
+    "yes": "Yes, please."
+  }
+}

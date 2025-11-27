@@ -1,0 +1,24 @@
+{
+  "name": ".selectedColorOption",
+  "content": {
+    "borderWidth": "2pt",
+    "borderRadius": "10pt",
+    "borderColor": "#FFFFFF",
+    "constraints": [
+      {
+        "type": "pos",
+        "x": "2pt",
+        "y": "2pt",
+        "anchor": "nw",
+        "relativeAnchor": "nw"
+      },
+      {
+        "type": "pos",
+        "x": "-2pt",
+        "y": "-2pt",
+        "anchor": "se",
+        "relativeAnchor": "se"
+      }
+    ]
+  }
+}

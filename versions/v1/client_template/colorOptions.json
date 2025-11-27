@@ -1,0 +1,185 @@
+{
+  "name": "colorOptions",
+  "content": {
+    "optionPurple": {
+      "actions": [
+        {
+          "type": "setFormValue",
+          "params": {
+            "form": "cardSettings",
+            "key": "colorOption",
+            "value": "purple"
+          }
+        }
+      ]
+    },
+    "optionPurpleSelected": {
+      "states": {
+        "visible": {
+          "hidden": false
+        },
+        "hidden": {
+          "hidden": true
+        }
+      },
+      "state": "hidden",
+      "conditions": [
+        {
+          "state": "visible",
+          "conditions": {
+            "left": {
+              "context": "namedForm",
+              "field": "cardSettings:colorOption"
+            },
+            "mode": "equals",
+            "right": "purple"
+          }
+        }
+      ]
+    },
+    "optionBlue": {
+      "actions": [
+        {
+          "type": "setFormValue",
+          "params": {
+            "form": "cardSettings",
+            "key": "colorOption",
+            "value": "blue"
+          }
+        }
+      ]
+    },
+    "optionBlueSelected": {
+      "states": {
+        "visible": {
+          "hidden": false
+        },
+        "hidden": {
+          "hidden": true
+        }
+      },
+      "state": "hidden",
+      "conditions": [
+        {
+          "state": "visible",
+          "conditions": {
+            "left": {
+              "context": "namedForm",
+              "field": "cardSettings:colorOption"
+            },
+            "mode": "equals",
+            "right": "blue"
+          }
+        }
+      ]
+    },
+    "optionLightGreen": {
+      "actions": [
+        {
+          "type": "setFormValue",
+          "params": {
+            "form": "cardSettings",
+            "key": "colorOption",
+            "value": "lightGreen"
+          }
+        }
+      ]
+    },
+    "optionLightGreenSelected": {
+      "states": {
+        "visible": {
+          "hidden": false
+        },
+        "hidden": {
+          "hidden": true
+        }
+      },
+      "state": "hidden",
+      "conditions": [
+        {
+          "state": "visible",
+          "conditions": {
+            "left": {
+              "context": "namedForm",
+              "field": "cardSettings:colorOption"
+            },
+            "mode": "equals",
+            "right": "lightGreen"
+          }
+        }
+      ]
+    },
+    "optionOrange": {
+      "actions": [
+        {
+          "type": "setFormValue",
+          "params": {
+            "form": "cardSettings",
+            "key": "colorOption",
+            "value": "orange"
+          }
+        }
+      ]
+    },
+    "optionOrangeSelected": {
+      "states": {
+        "visible": {
+          "hidden": false
+        },
+        "hidden": {
+          "hidden": true
+        }
+      },
+      "state": "hidden",
+      "conditions": [
+        {
+          "state": "visible",
+          "conditions": {
+            "left": {
+              "context": "namedForm",
+              "field": "cardSettings:colorOption"
+            },
+            "mode": "equals",
+            "right": "orange"
+          }
+        }
+      ]
+    },
+    "optionDarkGreen": {
+      "actions": [
+        {
+          "type": "setFormValue",
+          "params": {
+            "form": "cardSettings",
+            "key": "colorOption",
+            "value": "darkGreen"
+          }
+        }
+      ]
+    },
+    "optionDarkGreenSelected": {
+      "states": {
+        "visible": {
+          "hidden": false
+        },
+        "hidden": {
+          "hidden": true
+        }
+      },
+      "state": "hidden",
+      "conditions": [
+        {
+          "state": "visible",
+          "conditions": {
+            "left": {
+              "context": "namedForm",
+              "field": "cardSettings:colorOption"
+            },
+            "mode": "equals",
+            "right": "darkGreen"
+          }
+        }
+      ]
+    }
+  }
+}

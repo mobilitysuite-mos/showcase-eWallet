@@ -1,0 +1,292 @@
+{
+  "name": "c_startView",
+  "layers": [
+    {
+      "type": "layout",
+      "name": "backgroundLayout",
+      "value": "l_background",
+      "safeArea": {
+        "top": "contentOver",
+        "bottom": "contentOver"
+      },
+      "classes": [
+        "fullSize"
+      ]
+    },
+    {
+      "type": "container",
+      "name": "backgroundContent",
+      "constraints": [
+        {
+          "type": "pos",
+          "x": "25pt",
+          "y": "20pt",
+          "anchor": "nw",
+          "relativeAnchor": "nw"
+        },
+        {
+          "type": "pos",
+          "x": "-25pt",
+          "anchor": "e",
+          "relativeAnchor": "e"
+        },
+        {
+          "type": "size",
+          "height": "125pt"
+        }
+      ],
+      "children": [
+        {
+          "type": "text",
+          "name": "contentHeader",
+          "value": "$lang(header)$",
+          "scaleType": "alignRight",
+          "classes": [
+            "fontHeader",
+            "fontColorAccent"
+          ],
+          "constraints": [
+            {
+              "type": "pos",
+              "x": "0pt",
+              "y": "0pt",
+              "anchor": "nw",
+              "relativeAnchor": "nw"
+            },
+            {
+              "type": "pos",
+              "x": "0pt",
+              "anchor": "e",
+              "relativeAnchor": "e"
+            },
+            {
+              "type": "size",
+              "height": "55pt"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "name": "contentSubheader",
+          "value": "$lang(subHeader)$",
+          "scaleType": "alignRight",
+          "classes": [
+            "fontBold",
+            "fontColorPrimary"
+          ],
+          "constraints": [
+            {
+              "type": "pos",
+              "x": "0pt",
+              "y": "15pt",
+              "anchor": "ne",
+              "relativeAnchor": "se",
+              "relativeTo": "contentHeader"
+            },
+            {
+              "type": "pos",
+              "x": "0pt",
+              "anchor": "w",
+              "relativeAnchor": "w"
+            },
+            {
+              "type": "size",
+              "height": "55pt"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "container",
+      "name": "infoContainer",
+      "dataKey": "infoContainer",
+      "constraints": [
+        {
+          "type": "pos",
+          "x": "25pt",
+          "y": "60pt",
+          "anchor": "w",
+          "relativeAnchor": "w"
+        },
+        {
+          "type": "pos",
+          "x": "-25pt",
+          "anchor": "e",
+          "relativeAnchor": "e"
+        },
+        {
+          "type": "size",
+          "height": "180pt"
+        }
+      ],
+      "children": [
+        {
+          "type": "color",
+          "name": "containerBackground",
+          "classes": [
+            "contentContainer",
+            "fullSize"
+          ]
+        },
+        {
+          "type": "text",
+          "name": "infoLabel",
+          "value": "$lang(scan)$",
+          "scaleType": "alignCenter",
+          "classes": [
+            "fontLight"
+          ],
+          "constraints": [
+            {
+              "type": "pos",
+              "x": "40pt",
+              "y": "15pt",
+              "anchor": "nw",
+              "relativeAnchor": "nw"
+            },
+            {
+              "type": "pos",
+              "x": "-40pt",
+              "y": "-20pt",
+              "anchor": "se",
+              "relativeAnchor": "se"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "container",
+      "name": "cardsGalleryBackground",
+      "dataKey": "cardsGallery",
+      "safeArea": {
+        "top": "contentOver",
+        "bottom": "contentOver"
+      },
+      "classes": [
+        "fullSize"
+      ],
+      "children": [
+        {
+          "type": "color",
+          "name": "backgroundColor",
+          "classes": [
+            "backgroundTint",
+            "fullSize"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "gallery",
+      "name": "cardsGallery",
+      "dataKey": "cardsGallery",
+      "layout": "i_cardItem",
+      "template": "cardItem",
+      "table": "cards",
+      "query": "allCards",
+      "scrollCircular": false,
+      "insets": {
+        "left": "30pt",
+        "right": "30pt"
+      },
+      "constraints": [
+        {
+          "type": "pos",
+          "x": "0pt",
+          "y": "10%",
+          "anchor": "nw",
+          "relativeAnchor": "nw"
+        },
+        {
+          "type": "pos",
+          "x": "0pt",
+          "y": "-180pt",
+          "anchor": "se",
+          "relativeAnchor": "se"
+        }
+      ]
+    },
+    {
+      "type": "container",
+      "name": "scanButton",
+      "dataKey": "scanButton",
+      "borderRadius": "40pt",
+      "constraints": [
+        {
+          "type": "pos",
+          "x": "0pt",
+          "y": "-25pt",
+          "anchor": "s",
+          "relativeAnchor": "s"
+        },
+        {
+          "type": "size",
+          "height": "80pt",
+          "width": "80pt"
+        }
+      ],
+      "children": [
+        {
+          "type": "image",
+          "name": "scanIcon",
+          "value": "asset://icon-scan.png",
+          "scaleType": "scaleAspectFit",
+          "classes": [
+            "fullSize"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "container",
+      "name": "cardSettingsBackground",
+      "dataKey": "cardSettings",
+      "safeArea": {
+        "top": "contentOver",
+        "bottom": "contentOver"
+      },
+      "classes": [
+        "fullSize"
+      ],
+      "children": [
+        {
+          "type": "color",
+          "name": "backgroundColor",
+          "touchFeedback": "none",
+          "classes": [
+            "backgroundTint",
+            "fullSize"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "layout",
+      "name": "cardSettingsLayout",
+      "dataKey": "cardSettings",
+      "value": "l_cardSettings",
+      "staticTemplate": "cardSettings",
+      "constraints": [
+        {
+          "type": "pos",
+          "x": "25pt",
+          "y": "-15pt",
+          "anchor": "sw",
+          "relativeAnchor": "sw"
+        },
+        {
+          "type": "pos",
+          "x": "-25pt",
+          "anchor": "e",
+          "relativeAnchor": "e"
+        },
+        {
+          "type": "size",
+          "height": "85%"
+        }
+      ]
+    }
+  ]
+}

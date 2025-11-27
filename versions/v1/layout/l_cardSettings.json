@@ -1,0 +1,684 @@
+{
+  "name": "l_cardSettings",
+  "layers": [
+    {
+      "type": "color",
+      "name": "layoutBackground",
+      "classes": [
+        "contentContainer",
+        "fullSize"
+      ]
+    },
+    {
+      "type": "grid",
+      "name": "contentGrid",
+      "columns": "12",
+      "verticalItemSpacing": "20pt",
+      "insets": {
+        "top": "40pt",
+        "left": "25pt",
+        "right": "25pt",
+        "bottom": "85pt"
+      },
+      "classes": [
+        "fullSize"
+      ],
+      "children": [
+        {
+          "type": "container",
+          "name": "scannedValueContainer",
+          "constraints": [
+            {
+              "type": "grid",
+              "colSpan": "12",
+              "height": "115pt"
+            }
+          ],
+          "children": [
+            {
+              "type": "text",
+              "name": "scannedValueTitle",
+              "value": "$lang(scannedArticle)$",
+              "classes": [
+                "fontBold"
+              ],
+              "constraints": [
+                {
+                  "type": "pos",
+                  "x": "0pt",
+                  "y": "0pt",
+                  "anchor": "nw",
+                  "relativeAnchor": "nw"
+                },
+                {
+                  "type": "size",
+                  "height": "35pt",
+                  "width": "100%"
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "name": "textBoxContainer",
+              "constraints": [
+                {
+                  "type": "pos",
+                  "x": "0pt",
+                  "y": "0pt",
+                  "anchor": "nw",
+                  "relativeAnchor": "sw",
+                  "relativeTo": "scannedValueTitle"
+                },
+                {
+                  "type": "size",
+                  "height": "80pt",
+                  "width": "100%"
+                }
+              ],
+              "children": [
+                {
+                  "type": "color",
+                  "name": "textBoxBackground",
+                  "classes": [
+                    "textBoxContainer",
+                    "fullSize"
+                  ]
+                },
+                {
+                  "type": "textBox",
+                  "name": "scannedValueTextBox",
+                  "form": "cardSettings",
+                  "formDataKey": "article",
+                  "scaleType": "alignTopLeft",
+                  "readOnly": true,
+                  "classes": [
+                    "fontBold",
+                    "fontColorPrimary"
+                  ],
+                  "constraints": [
+                    {
+                      "type": "pos",
+                      "x": "15pt",
+                      "y": "15pt",
+                      "anchor": "nw",
+                      "relativeAnchor": "nw"
+                    },
+                    {
+                      "type": "pos",
+                      "x": "-15pt",
+                      "y": "-15pt",
+                      "anchor": "se",
+                      "relativeAnchor": "se"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "name": "nameContainer",
+          "constraints": [
+            {
+              "type": "grid",
+              "colSpan": "12",
+              "height": "80pt"
+            }
+          ],
+          "children": [
+            {
+              "type": "text",
+              "name": "nameTitle",
+              "value": "$lang(name)$",
+              "classes": [
+                "fontBold"
+              ],
+              "constraints": [
+                {
+                  "type": "pos",
+                  "x": "0pt",
+                  "y": "0pt",
+                  "anchor": "nw",
+                  "relativeAnchor": "nw"
+                },
+                {
+                  "type": "size",
+                  "height": "35pt",
+                  "width": "100%"
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "name": "textBoxContainer",
+              "constraints": [
+                {
+                  "type": "pos",
+                  "x": "0pt",
+                  "y": "0pt",
+                  "anchor": "nw",
+                  "relativeAnchor": "sw",
+                  "relativeTo": "nameTitle"
+                },
+                {
+                  "type": "size",
+                  "height": "45pt",
+                  "width": "100%"
+                }
+              ],
+              "children": [
+                {
+                  "type": "color",
+                  "name": "textBoxBackground",
+                  "classes": [
+                    "textBoxContainer",
+                    "fullSize"
+                  ]
+                },
+                {
+                  "type": "textBox",
+                  "name": "nameTextBox",
+                  "form": "cardSettings",
+                  "formDataKey": "name",
+                  "hint": "$lang(nameHint)$",
+                  "hasClearButton": false,
+                  "closeKeyboardOnReturn": true,
+                  "constraints": [
+                    {
+                      "type": "pos",
+                      "x": "15pt",
+                      "y": "0pt",
+                      "anchor": "nw",
+                      "relativeAnchor": "nw"
+                    },
+                    {
+                      "type": "pos",
+                      "x": "-15pt",
+                      "y": "0pt",
+                      "anchor": "se",
+                      "relativeAnchor": "se"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "name": "colorContainer",
+          "constraints": [
+            {
+              "type": "grid",
+              "colSpan": "12"
+            }
+          ],
+          "children": [
+            {
+              "type": "text",
+              "name": "colorTitle",
+              "value": "$lang(color)$",
+              "classes": [
+                "fontBold"
+              ],
+              "constraints": [
+                {
+                  "type": "pos",
+                  "x": "0pt",
+                  "y": "0pt",
+                  "anchor": "nw",
+                  "relativeAnchor": "nw"
+                },
+                {
+                  "type": "size",
+                  "height": "27pt",
+                  "width": "100%"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "name": "colorSubtitle",
+              "value": "$lang(chooseColor)$",
+              "classes": [
+                "fontSizeS",
+                "fontColorSecondary"
+              ],
+              "constraints": [
+                {
+                  "type": "pos",
+                  "x": "0pt",
+                  "y": "0pt",
+                  "anchor": "nw",
+                  "relativeAnchor": "sw",
+                  "relativeTo": "colorTitle"
+                },
+                {
+                  "type": "size",
+                  "width": "100%"
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "name": "colorOptionsContainer",
+              "constraints": [
+                {
+                  "type": "pos",
+                  "x": "0pt",
+                  "y": "10pt",
+                  "anchor": "nw",
+                  "relativeAnchor": "sw",
+                  "relativeTo": "colorSubtitle"
+                },
+                {
+                  "type": "size",
+                  "height": "50pt",
+                  "width": "100%"
+                }
+              ],
+              "children": [
+                {
+                  "type": "layout",
+                  "name": "colorOptionsLayout",
+                  "value": "l_colorOptions",
+                  "staticTemplate": "colorOptions",
+                  "classes": [
+                    "fullSize"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "name": "sequrityContainer",
+          "constraints": [
+            {
+              "type": "grid",
+              "colSpan": "12"
+            }
+          ],
+          "children": [
+            {
+              "type": "text",
+              "name": "sequrityTitle",
+              "value": "$lang(sequreScans)$",
+              "classes": [
+                "fontBold"
+              ],
+              "constraints": [
+                {
+                  "type": "pos",
+                  "x": "0pt",
+                  "y": "0pt",
+                  "anchor": "nw",
+                  "relativeAnchor": "nw"
+                },
+                {
+                  "type": "size",
+                  "height": "27pt",
+                  "width": "100%"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "name": "sequritySubtitle",
+              "value": "$lang(enableBiometrics)$",
+              "classes": [
+                "fontSizeS",
+                "fontColorSecondary"
+              ],
+              "constraints": [
+                {
+                  "type": "pos",
+                  "x": "0pt",
+                  "y": "0pt",
+                  "anchor": "nw",
+                  "relativeAnchor": "sw",
+                  "relativeTo": "sequrityTitle"
+                },
+                {
+                  "type": "size",
+                  "width": "100%"
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "name": "toggleContainer",
+              "constraints": [
+                {
+                  "type": "pos",
+                  "x": "0pt",
+                  "y": "15pt",
+                  "anchor": "nw",
+                  "relativeAnchor": "sw",
+                  "relativeTo": "sequritySubtitle"
+                },
+                {
+                  "type": "size",
+                  "width": "100%"
+                }
+              ],
+              "children": [
+                {
+                  "type": "checkBox",
+                  "name": "sequrityToggle",
+                  "form": "cardSettings",
+                  "formDataKey": "biometrics",
+                  "images": [
+                    "asset://icon-toggle-off.png",
+                    "asset://icon-toggle-on.png"
+                  ],
+                  "values": [
+                    "false",
+                    "true"
+                  ],
+                  "constraints": [
+                    {
+                      "type": "pos",
+                      "x": "0pt",
+                      "y": "0pt",
+                      "anchor": "nw",
+                      "relativeAnchor": "nw"
+                    },
+                    {
+                      "type": "size",
+                      "height": "30pt",
+                      "width": "50pt"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "name": "sequrityToggleLabel",
+                  "value": "$lang(yes)$",
+                  "scaleType": "alignLeft",
+                  "classes": [
+                    "fontSizeS",
+                    "fontColorPrimary"
+                  ],
+                  "constraints": [
+                    {
+                      "type": "pos",
+                      "x": "10pt",
+                      "y": "0pt",
+                      "anchor": "w",
+                      "relativeAnchor": "e",
+                      "relativeTo": "sequrityToggle"
+                    },
+                    {
+                      "type": "pos",
+                      "x": "0pt",
+                      "anchor": "e",
+                      "relativeAnchor": "e"
+                    },
+                    {
+                      "type": "size",
+                      "height": "20pt"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "gradient",
+      "gradientType": "linear",
+      "direction": "TD",
+      "bottomLeftRadius": "25pt",
+      "bottomRightRadius": "25pt",
+      "colors": [
+        "#14282800",
+        "#142828"
+      ],
+      "constraints": [
+        {
+          "type": "pos",
+          "x": "0pt",
+          "y": "0pt",
+          "anchor": "sw",
+          "relativeAnchor": "sw"
+        },
+        {
+          "type": "size",
+          "height": "200pt",
+          "width": "100%"
+        }
+      ]
+    },
+    {
+      "type": "container",
+      "name": "closeButton",
+      "dataKey": "closeButton",
+      "constraints": [
+        {
+          "type": "pos",
+          "x": "-15pt",
+          "y": "15pt",
+          "anchor": "ne",
+          "relativeAnchor": "ne"
+        },
+        {
+          "type": "size",
+          "height": "35pt",
+          "width": "35pt"
+        }
+      ],
+      "children": [
+        {
+          "type": "image",
+          "name": "closeIcon",
+          "value": "asset://icon-close.png",
+          "scaleType": "scaleAspectFit",
+          "classes": [
+            "fullSize"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "container",
+      "name": "createButtonsContainer",
+      "dataKey": "createButtonsContainer",
+      "constraints": [
+        {
+          "type": "pos",
+          "x": "25pt",
+          "y": "-25pt",
+          "anchor": "sw",
+          "relativeAnchor": "sw"
+        },
+        {
+          "type": "pos",
+          "x": "-25pt",
+          "anchor": "e",
+          "relativeAnchor": "e"
+        },
+        {
+          "type": "size",
+          "height": "45pt"
+        }
+      ],
+      "children": [
+        {
+          "type": "container",
+          "name": "cancelButton",
+          "dataKey": "cancelButton",
+          "borderRadius": "10pt",
+          "constraints": [
+            {
+              "type": "pos",
+              "x": "-5pt",
+              "y": "0pt",
+              "anchor": "ne",
+              "relativeAnchor": "n"
+            },
+            {
+              "type": "pos",
+              "x": "0pt",
+              "y": "0pt",
+              "anchor": "sw",
+              "relativeAnchor": "sw"
+            }
+          ],
+          "children": [
+            {
+              "type": "text",
+              "name": "cancelLabel",
+              "value": "$lang(cancel)$",
+              "scaleType": "alignCenter",
+              "classes": [
+                "fontBold",
+                "fontColorAccent",
+                "fullSize"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "name": "saveButton",
+          "dataKey": "saveButton",
+          "classes": [
+            "actionButton"
+          ],
+          "constraints": [
+            {
+              "type": "pos",
+              "x": "5pt",
+              "y": "0pt",
+              "anchor": "nw",
+              "relativeAnchor": "n"
+            },
+            {
+              "type": "pos",
+              "x": "0pt",
+              "y": "0pt",
+              "anchor": "se",
+              "relativeAnchor": "se"
+            }
+          ],
+          "children": [
+            {
+              "type": "text",
+              "name": "saveLabel",
+              "value": "$lang(save)$",
+              "scaleType": "alignCenter",
+              "classes": [
+                "fontBold",
+                "fontColorPrimary",
+                "fullSize"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "container",
+      "name": "editButtonsContainer",
+      "dataKey": "editButtonsContainer",
+      "constraints": [
+        {
+          "type": "pos",
+          "x": "25pt",
+          "y": "-25pt",
+          "anchor": "sw",
+          "relativeAnchor": "sw"
+        },
+        {
+          "type": "pos",
+          "x": "-25pt",
+          "anchor": "e",
+          "relativeAnchor": "e"
+        },
+        {
+          "type": "size",
+          "height": "45pt"
+        }
+      ],
+      "children": [
+        {
+          "type": "container",
+          "name": "deleteButton",
+          "dataKey": "deleteButton",
+          "borderRadius": "10pt",
+          "constraints": [
+            {
+              "type": "pos",
+              "x": "-5pt",
+              "y": "0pt",
+              "anchor": "ne",
+              "relativeAnchor": "n"
+            },
+            {
+              "type": "pos",
+              "x": "0pt",
+              "y": "0pt",
+              "anchor": "sw",
+              "relativeAnchor": "sw"
+            }
+          ],
+          "children": [
+            {
+              "type": "text",
+              "name": "deleteLabel",
+              "value": "$lang(delete)$",
+              "scaleType": "alignCenter",
+              "classes": [
+                "fontBold",
+                "fontColorAccent",
+                "fullSize"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "name": "updateButton",
+          "dataKey": "updateButton",
+          "classes": [
+            "actionButton"
+          ],
+          "constraints": [
+            {
+              "type": "pos",
+              "x": "5pt",
+              "y": "0pt",
+              "anchor": "nw",
+              "relativeAnchor": "n"
+            },
+            {
+              "type": "pos",
+              "x": "0pt",
+              "y": "0pt",
+              "anchor": "se",
+              "relativeAnchor": "se"
+            }
+          ],
+          "children": [
+            {
+              "type": "text",
+              "name": "updateLabel",
+              "value": "$lang(update)$",
+              "scaleType": "alignCenter",
+              "classes": [
+                "fontBold",
+                "fontColorPrimary",
+                "fullSize"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

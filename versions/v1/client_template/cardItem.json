@@ -1,0 +1,115 @@
+{
+  "name": "cardItem",
+  "content": {
+    "cardGradient": {
+      "colors": [
+        "{{gradientStart}}",
+        "{{gradientEnd}}"
+      ]
+    },
+    "cardName": {
+      "value": "{{name}}"
+    },
+    "cardBarcode": {
+      "value": "{{article}}"
+    },
+    "cardArticle": {
+      "value": "{{article}}"
+    },
+    "scanDate": {
+      "value": "{{date}}"
+    },
+    "scanTime": {
+      "value": "{{time}}"
+    },
+    "editButton": {
+      "actions": [
+        {
+          "type": "fireEvent",
+          "params": {
+            "eventType": "editCard",
+            "table": "cards",
+            "query": "cardById",
+            "queryParams": [
+              "{{id}}"
+            ]
+          }
+        }
+      ]
+    },
+    "cardItemLocked": {
+      "states": {
+        "visible": {
+          "hidden": false
+        },
+        "hidden": {
+          "hidden": true
+        }
+      },
+      "state": "hidden",
+      "conditions": [
+        {
+          "state": "visible",
+          "conditions": {
+            "left": "{{biometrics}}",
+            "mode": "equals",
+            "right": "true"
+          }
+        }
+      ]
+    },
+    "unlockButton": {
+      "actions": [
+        {
+          "type": "checkBiometry",
+          "params": {
+            "title": "$lang(biometricsTitle)$",
+            "negativeButton": "$lang(cancel)$",
+            "onSuccess": "checkSuccess",
+            "onError": "checkError"
+          }
+        }
+      ]
+    },
+    "cardItemUnlocked": {
+      "states": {
+        "visible": {
+          "hidden": false
+        },
+        "hidden": {
+          "hidden": true
+        }
+      },
+      "state": "hidden",
+      "conditions": [
+        {
+          "state": "visible",
+          "conditions": {
+            "context": "layerStatus",
+            "field": "unlockAnimation:playing"
+          }
+        }
+      ]
+    },
+    "unlockAnimation": {
+      "states": {
+        "visible": {
+          "hidden": false
+        },
+        "hidden": {
+          "hidden": true
+        }
+      },
+      "state": "hidden",
+      "conditions": [
+        {
+          "state": "visible",
+          "conditions": {
+            "context": "layerStatus",
+            "field": "unlockAnimation:playing"
+          }
+        }
+      ]
+    }
+  }
+}

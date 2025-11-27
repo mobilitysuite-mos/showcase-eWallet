@@ -1,0 +1,42 @@
+{
+  "name": "addCard",
+  "content": {
+    "type": "addCard",
+    "actions": [
+      {
+        "type": "executeSQL",
+        "leadingDelimiter": "{$",
+        "trailingDelimiter": "$}",
+        "dynamicParams": {
+          "article": {
+            "context": "namedForm",
+            "field": "cardSettings:article"
+          },
+          "name": {
+            "context": "namedForm",
+            "field": "cardSettings:name"
+          },
+          "colorOption": {
+            "context": "namedForm",
+            "field": "cardSettings:colorOption"
+          },
+          "biometrics": {
+            "context": "namedForm",
+            "field": "cardSettings:biometrics"
+          }
+        },
+        "params": {
+          "sql": "INSERT INTO cards (id, name, article, colorOption, biometrics, timestamp) VALUES ((SELECT coalesce(max(id), 0) + 1 FROM cards), ?1, ?2, ?3, ?4, strftime('%Y-%m-%dT%H:%M:%S', 'now', 'localtime'))",
+          "sqlParams": [
+            "{$name$}",
+            "{$article$}",
+            "{$colorOption$}",
+            "{$biometrics$}"
+          ],
+          "onSuccess": "cardSuccess",
+          "onError": "cardError"
+        }
+      }
+    ]
+  }
+}

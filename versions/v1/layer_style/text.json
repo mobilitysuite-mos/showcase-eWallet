@@ -1,0 +1,9 @@
+{
+  "name": "text",
+  "content": {
+    "fontSize": "18pt",
+    "fontColor": "#FFFFFF",
+    "font": "LibreFranklin-Regular",
+    "lineBreakMode": "truncateEnd"
+  }
+}

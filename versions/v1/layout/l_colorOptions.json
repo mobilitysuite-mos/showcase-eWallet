@@ -1,0 +1,200 @@
+{
+  "name": "l_colorOptions",
+  "layers": [
+    {
+      "type": "container",
+      "constraints": [
+        {
+          "type": "pos",
+          "x": "0pt",
+          "y": "0pt",
+          "anchor": "nw",
+          "relativeAnchor": "nw"
+        },
+        {
+          "type": "size",
+          "height": "100%",
+          "width": "20%"
+        }
+      ],
+      "children": [
+        {
+          "type": "gradient",
+          "name": "optionPurple",
+          "dataKey": "optionPurple",
+          "colors": [
+            "#631EF4",
+            "#B036D8"
+          ],
+          "classes": [
+            "colorOption"
+          ]
+        },
+        {
+          "type": "color",
+          "name": "optionPurpleSelected",
+          "dataKey": "optionPurpleSelected",
+          "classes": [
+            "selectedColorOption"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "container",
+      "constraints": [
+        {
+          "type": "pos",
+          "x": "20%",
+          "y": "0pt",
+          "anchor": "nw",
+          "relativeAnchor": "nw"
+        },
+        {
+          "type": "size",
+          "height": "100%",
+          "width": "20%"
+        }
+      ],
+      "children": [
+        {
+          "type": "gradient",
+          "name": "optionBlue",
+          "dataKey": "optionBlue",
+          "colors": [
+            "#E64F4D",
+            "#5F86FF"
+          ],
+          "classes": [
+            "colorOption"
+          ]
+        },
+        {
+          "type": "color",
+          "name": "optionBlueSelected",
+          "dataKey": "optionBlueSelected",
+          "classes": [
+            "selectedColorOption"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "container",
+      "constraints": [
+        {
+          "type": "pos",
+          "x": "40%",
+          "y": "0pt",
+          "anchor": "nw",
+          "relativeAnchor": "nw"
+        },
+        {
+          "type": "size",
+          "height": "100%",
+          "width": "20%"
+        }
+      ],
+      "children": [
+        {
+          "type": "gradient",
+          "name": "optionLightGreen",
+          "dataKey": "optionLightGreen",
+          "colors": [
+            "#233AE8",
+            "#4EE2D3"
+          ],
+          "classes": [
+            "colorOption"
+          ]
+        },
+        {
+          "type": "color",
+          "name": "optionLightGreenSelected",
+          "dataKey": "optionLightGreenSelected",
+          "classes": [
+            "selectedColorOption"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "container",
+      "constraints": [
+        {
+          "type": "pos",
+          "x": "60%",
+          "y": "0pt",
+          "anchor": "nw",
+          "relativeAnchor": "nw"
+        },
+        {
+          "type": "size",
+          "height": "100%",
+          "width": "20%"
+        }
+      ],
+      "children": [
+        {
+          "type": "gradient",
+          "name": "optionOrange",
+          "dataKey": "optionOrange",
+          "colors": [
+            "#FF38EA",
+            "#FF6934"
+          ],
+          "classes": [
+            "colorOption"
+          ]
+        },
+        {
+          "type": "color",
+          "name": "optionOrangeSelected",
+          "dataKey": "optionOrangeSelected",
+          "classes": [
+            "selectedColorOption"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "container",
+      "constraints": [
+        {
+          "type": "pos",
+          "x": "80%",
+          "y": "0pt",
+          "anchor": "nw",
+          "relativeAnchor": "nw"
+        },
+        {
+          "type": "size",
+          "height": "100%",
+          "width": "20%"
+        }
+      ],
+      "children": [
+        {
+          "type": "gradient",
+          "name": "optionDarkGreen",
+          "dataKey": "optionDarkGreen",
+          "colors": [
+            "#4EB99E",
+            "#3DD773"
+          ],
+          "classes": [
+            "colorOption"
+          ]
+        },
+        {
+          "type": "color",
+          "name": "optionDarkGreenSelected",
+          "dataKey": "optionDarkGreenSelected",
+          "classes": [
+            "selectedColorOption"
+          ]
+        }
+      ]
+    }
+  ]
+}

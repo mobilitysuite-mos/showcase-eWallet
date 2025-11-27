@@ -1,0 +1,37 @@
+{
+  "name": "scanSuccess",
+  "content": {
+    "type": "scanSuccess",
+    "actions": [
+      {
+        "type": "resetForm",
+        "params": {
+          "form": "cardSettings"
+        }
+      },
+      {
+        "type": "setFormValue",
+        "params": {
+          "form": "cardSettings",
+          "key": "article",
+          "value": "{{barcode}}"
+        }
+      },
+      {
+        "type": "setFormValue",
+        "params": {
+          "form": "cardSettings",
+          "key": "colorOption",
+          "value": "purple"
+        }
+      },
+      {
+        "type": "setVariable",
+        "params": {
+          "variable": "showCardSettings",
+          "value": "true"
+        }
+      }
+    ]
+  }
+}

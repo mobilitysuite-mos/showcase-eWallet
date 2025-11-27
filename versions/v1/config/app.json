@@ -1,0 +1,9 @@
+{
+  "meta": {
+    "title": "Mobility Suite mos. Showcase - e-Wallet App"
+  },
+  "context": {
+    "updateInterval": 600,
+    "updateBehavior": "popUp"
+  }
+}
